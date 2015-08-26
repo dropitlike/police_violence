@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Police Violence Against Civilians 2011-2013</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+
+    <link rel="stylesheet" type="text/css" href='highlighter/shCore.css'/>
+    <link rel="stylesheet" type="text/css" href='highlighter/shThemeDefault.css'/>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+
+    Public data source
+    <a href="http://regressing.deadspin.com/were-compiling-every-police-involved-shooting-in-americ-1624180387/all" target="_blank">deadspin.com</a>.  Use their Google spreadsheet to download tab-separated values (.tsv) files.  Edit column names to not have spaces (see police_violence.js [part of this page] for reference).
+
+<h2>2011-2013 Police Violence</h2>
+
+<div class="row">
+    <div id="us-chart">
+        <strong>Civilians injured or killed by police by state (color: total number of victims)</strong>
+        <a class="reset" href="javascript:usChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+        <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="yearly-bubble-chart" class="dc-chart">
+        <strong></strong>
+        <a class="reset" href="javascript:yearlyBubbleChart.filterAll();dc.redrawAll();"
+           style="display: none;">reset</a>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="races-chart">
+        <strong>Victims' races</strong>
+        <a class="reset" href="javascript:racesChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="outcomes-chart">
+        <strong>Victim Outcome</strong>
+        <a class="reset" href="javascript:outcomesChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="day-of-week-chart">
+        <strong>Day of Week</strong>
+        <a class="reset" href="javascript:dayOfWeekChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="ages-chart">
+        <strong>Victims by age</strong>
+        <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+        <a class="reset" href="javascript:agesChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--
+<div class="row">
+    <div id="monthly-move-chart">
+        <strong></strong>
+        <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+        <a class="reset" href="javascript:moveChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
+           style="display: none;">reset</a>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="monthly-volume-chart">
+    </div>
+    <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p>
+</div>
+-->
+<div class="row">
+    <div>
+        <div class="dc-data-count">
+            <span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a
+                href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+        </div>
+    </div>
+    <table class="table table-hover dc-data-table">
+        <thead>
+        <tr class="header">
+            <th>Date</th>
+            <th>Victim</th>
+            <th>Link to news story</th>
+            <th>Spreadsheet Line</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<div class="clearfix"></div>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+
+<script type="text/javascript" src="police_violence.js"></script>
+
+
+
+</body>
+</html>
